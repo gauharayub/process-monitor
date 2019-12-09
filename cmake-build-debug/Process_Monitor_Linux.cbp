@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Process_Monitor_Linux"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Process_Monitor_Linux">
+				<Option output="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Process_Monitor_Linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 Process_Monitor_Linux"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Process_Monitor_Linux/fast">
+				<Option output="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Process_Monitor_Linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 Process_Monitor_Linux/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/Process.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/ProcessContainer.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/ProcessParser.cpp">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/ProcessParser.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/Sysinfo.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/constants.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/main.cpp">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/util.cpp">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/util.h">
+			<Option target="Process_Monitor_Linux"/>
+		</Unit>
+		<Unit filename="/home/gauhar/Desktop/git_workspace/Process-Monitor-Linux/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
