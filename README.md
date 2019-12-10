@@ -8,5 +8,5 @@ sudo apt-get install libncurses5-dev libncursesw5-dev
 
 Commands to run project locally:
 
-g++ main.cpp ProcessParser.cpp util.cpp -lncurses   &nbsp;&nbsp;&nbsp;       //link ncurses library with other executables...
+g++ main.cpp ProcessParser.cpp util.cpp -lncurses     (6*&nbsp);       //link ncurses library with other executables...
 
