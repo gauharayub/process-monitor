@@ -1,6 +1,4 @@
 # Process-Monitor-Linux
-This project displays information about CPU usage, RAM usage, Uptime of various process running on system using ncurses library.
-The information about processes is extracted with the extensive use of file handling.
 
 Install ncurses library using following commands on linux terminal:
 
