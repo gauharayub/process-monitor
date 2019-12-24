@@ -37,16 +37,7 @@ std::string ProcessParser::getVmSize(std::string pid) {
         // searching line by line
         if (line.compare(0, name.size(), name) == 0) {
             // slicing string line on ws for values using sstream
-            // Note: 1. it is using buf to collect each line;
-            //       2. and parse it into begin and end
-            //       3. finally it processes into a vector of string
-            // Example:
-            //       1. try "cat /proc/16559/"
-            //       2. one can get:
-            //              "...
-            //               VmData: 1131692 kB
-            //               ..."
-            //       3. Here, "1131692" is the values[1]
+            
             std::istringstream buf(line);
             std::istream_iterator<std::string> begin(buf), end;
             std::vector<std::string> values(begin, end);
@@ -338,10 +329,7 @@ std::string ProcessParser::getSysKernelVersion() {
     return "";
 }
 
-/* Read /etc/os-release. We expect a string with extra characters,
- * which we delete based on specifications in documentation.
- * The result is the name of the operating system.
- * */
+
 std::string ProcessParser::getOsName() {
     std::string line;
     std::string name = "PRETTY_NAME";
