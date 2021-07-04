@@ -20,7 +20,7 @@ Install ncurses library using following commands on linux terminal:
 
     `cmake -S . -B ./out/build`
 
-    `cd out/build`
+    `cd ../out/build`
     
     `make`
 
