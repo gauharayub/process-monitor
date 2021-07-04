@@ -2,7 +2,7 @@
 
 Install ncurses library using following commands on linux terminal:
 
-### STEPS TO BUILD RUN THE PROJECT
+### STEPS TO BUILD AND RUN THE PROJECT
 
 1. Install dependencies
 
