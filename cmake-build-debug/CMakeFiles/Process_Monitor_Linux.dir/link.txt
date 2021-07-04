@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Process_Monitor_Linux.dir/main.cpp.o CMakeFiles/Process_Monitor_Linux.dir/ProcessParser.cpp.o CMakeFiles/Process_Monitor_Linux.dir/util.cpp.o  -o Process_Monitor_Linux -lcurses /usr/lib/x86_64-linux-gnu/libform.so 
