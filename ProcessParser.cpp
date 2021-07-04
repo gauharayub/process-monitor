@@ -1,5 +1,3 @@
-//includes definitions of all functions declared in ProcessParser.h header file....
-
 #include "ProcessParser.h"
 #include <algorithm>
 #include <iostream>
@@ -230,8 +228,8 @@ std::vector<std::string> ProcessParser::getSysCpuPercent(std::string core_number
 std::string ProcessParser::printCpuStats(std::vector<std::string> values_1,
                                          std::vector<std::string> values_2)
 {
-    /* Note:
-     * Because CPU stats can be calculated only if you take measurements
+    /* 
+     * Because CPU stats can be calculated only if we take measurements
      * in two different time, this function has two parameters:
      * two vectors of relevant values.
      * We use a formula to calculate overall activity of processor.

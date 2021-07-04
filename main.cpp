@@ -10,14 +10,14 @@ using namespace std;
 //ncurses is a dedicated API for writing terminal-independent text outputs.
 //It refreshes the relevant data every second.
 //ncurses also creates percentage bars and separate windows within the terminal.
-char* getCString(string s){
+char* getCString(string s) {
     int len = s.length();
     char *cstring  = new char[len+1];
     strcpy(cstring,s.c_str());
     return cstring;
 }
 
-void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win){
+void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win) {
     sys.setAttributes();
     mvwprintw(sys_win,2,2,getCString(( "OS: " + sys.getOsName())));
     mvwprintw(sys_win,3,2,getCString(( "Kernel version: " + sys.getKernelVersion())));
@@ -46,8 +46,7 @@ void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win){
 // They are distributed across 10 rows in a dedicated window.
 // Every invocation of the function refreshes the process list and prints refreshed data.
 
-void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
-{
+void getProcessListToConsole(ProcessContainer procs,WINDOW* win) {
     procs.refreshList();
     wattron(win,COLOR_PAIR(2));
     mvwprintw(win,1,2,"PID:");
@@ -57,7 +56,9 @@ void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
     mvwprintw(win,1,35,"Uptime:");
     mvwprintw(win,1,44,"CMD:");
     wattroff(win, COLOR_PAIR(2));
+
     vector<std::string> processes = procs.getList();
+
     for(int i = 0; i < 10; i++) {
         mvwprintw(win,2 +i,2,getCString(processes[i]));
     }
@@ -66,8 +67,7 @@ void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
 //The binding function for consistent display of data via ncurses is the printMain()function.
 // This function accepts two parameters: a SysInfo object and a ProcessContainer.
 //The function initializes the ncurses screen, separate windows, and a coloring scheme.
-void printMain(SysInfo sys,ProcessContainer procs)
-{
+void printMain(SysInfo sys,ProcessContainer procs) {
     initscr(); // start curses mode
     noecho(); // not printing input values
     cbreak(); // Terminating on classic ctrl + c
@@ -96,14 +96,13 @@ void printMain(SysInfo sys,ProcessContainer procs)
 
 
 int main() {
+
     //Object which contains list of current processes, Container for Process Class
     ProcessContainer procs;
+
     // Object which contains relevant methods and attributes regarding system details
     SysInfo sys;
     printMain(sys,procs);
-    return 0;
-
-
 
     return 0;
 }

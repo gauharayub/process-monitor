@@ -1,7 +1,9 @@
 #include<fstream>
 #include<string>
 #include "util.h"
-string  Util::convertToTime(long int input_seconds){
+
+
+string  Util::convertToTime(long int input_seconds) {
     long minutes = input_seconds/60;
     long hours = minutes/60;
     long seconds =  int(input_seconds%60);
@@ -13,7 +15,7 @@ string  Util::convertToTime(long int input_seconds){
 //constructing string for progress bar
 //50 bars is uniformly streched 0-100%
 //every 2% is one bar (|)
-string Util::getProgressBar(string percent){
+string Util::getProgressBar(string percent) {
     string result = "0%";
     int _size  = 50;
     //stof converts string into floating point number......
