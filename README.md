@@ -6,15 +6,15 @@ Install ncurses library using following commands on linux terminal:
 
 1. Install dependencies
 
-`sudo apt-get install libncurses5-dev libncursesw5-dev`
+    `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
 2. Commands to compile and run project locally:
 
-`cd src`
+    `cd src`
 
-`g++ main.cpp ProcessParser.cpp util.cpp -lncurses`
+    `g++ main.cpp ProcessParser.cpp util.cpp -lncurses`
 
-` ./a.out `
+    ` ./a.out `
 
 
 ### PROJECT DEMO
