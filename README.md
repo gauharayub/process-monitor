@@ -6,15 +6,23 @@ Install ncurses library using following commands on linux terminal:
 
 1. Install dependencies
 
+    1.1 install cmake using snap/apt or from offical website
+
+    [CMake Downloads](https://cmake.org/download/)
+
+    1.2 Install ncurses library
+    
     `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
-2. Commands to compile and run project locally:
+2. Commands to build and run project locally (in Linux):
 
     `cd src`
 
-    `g++ main.cpp ProcessParser.cpp util.cpp -lncurses`
+    `cmake -S . -B ./out/build`
 
-    ` ./a.out `
+    `cd out/build`
+
+    `./PROCESS_MONITOR`
 
 
 ### PROJECT DEMO

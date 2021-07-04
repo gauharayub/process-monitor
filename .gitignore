@@ -2,6 +2,6 @@
 
 cmake-build-debug/
 
-build/
+out/
 
 .vscode/
