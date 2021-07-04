@@ -37,16 +37,7 @@ std::string ProcessParser::getVmSize(std::string pid) {
         // searching line by line
         if (line.compare(0, name.size(), name) == 0) {
             // slicing string line on ws for values using sstream
-            // Note: 1. it is using buf to collect each line;
-            //       2. and parse it into begin and end
-            //       3. finally it processes into a vector of string
-            // Example:
-            //       1. try "cat /proc/16559/"
-            //       2. one can get:
-            //              "...
-            //               VmData: 1131692 kB
-            //               ..."
-            //       3. Here, "1131692" is the values[1]
+            
             std::istringstream buf(line);
             std::istream_iterator<std::string> begin(buf), end;
             std::vector<std::string> values(begin, end);
@@ -169,17 +160,11 @@ std::vector<std::string> ProcessParser::getPidList() {
         throw std::runtime_error( std::strerror(errno) );
     }
 
-    // Note: it is IMPORTANT that for each element (file || dirctoary) inside the /proc
+    
     while ( dirent* dirp = readdir(dir) ) {
         // STEP 1 : check if it is this a directory
         if ( dirp->d_type != DT_DIR ) continue;
 
-        // STEP 2 : check if every chararcter in it is a digit
-        /* Note:
-         * The function starting with "[]" is called "lambda function" or "arrow function",
-         * here, it specifically checks from start to end, and check each element is a digit (return true if yes for each)
-         * in the end, if all the elements are digits, then the all_of() returns true
-         */
         if ( all_of( dirp->d_name, dirp->d_name + std::strlen(dirp->d_name), [](char c){ return std::isdigit(c); } ) ) {
             container.push_back(dirp->d_name);
         }
@@ -214,11 +199,7 @@ int ProcessParser::getNumberofCores() {
             std::istringstream buf(line);
             std::istream_iterator<std::string> begin(buf), end;
             std::vector<std::string> values(begin, end);
-            // verbosely check:
-            // std::cout << "The vector of strings contains:" << std::endl;
-            // for (auto& str : values) cout << str << ", ";
-            // std::cout << '\n';
-
+          
             return stoi(values[3]); // FYI, the raw info: "cpu cores       : 2"
         }
     }
@@ -226,11 +207,6 @@ int ProcessParser::getNumberofCores() {
 
 
 std::vector<std::string> ProcessParser::getSysCpuPercent(std::string core_number) {
-
-    // It is possible to use this method for selection of data for
-    // overall cpu or every core.
-    // When nothing is passed "cpu" line is read
-    // When, for example, "0" is passed -> cpu0 -> data for first core is read
     std::string line;
     std::string name = "cpu" + core_number;
     std::ifstream stream = Util::getStream( Path::basePath() + Path::statPath() );
@@ -294,12 +270,7 @@ float ProcessParser::getSysIdleCpuTime(std::vector<std::string> values) {
 
 float ProcessParser::getSysRamPercent() {
     std::string line;
-    // Note: here we would better include ':' as well
-    // (TODO: confirm it is OK to not do so)
-    // For example:
-    // MemFree:       55556048 kB
-    // MemAvailable:  60598508 kB
-    // Buffers:         923428 kB
+  
     std::string name_1 = "MemAvailable:";
     std::string name_2 = "MemFree:";
     std::string name_3 = "Buffers:";
@@ -337,9 +308,7 @@ float ProcessParser::generateMemory(std::string line) {
     std::vector<std::string> values(begin, end);
 
     return stof(values[1]); // For example:
-    // MemFree:       55556048 kB
-    // MemAvailable:  60598508 kB
-    // Buffers:         923428 kB
+    
 }
 
 /* Open a stream on /proc/version, getting data about the kernel version */
@@ -353,18 +322,14 @@ std::string ProcessParser::getSysKernelVersion() {
             std::istringstream buf(line);
             std::istream_iterator<std::string> begin(buf), end;
             std::vector<std::string> values(begin, end);
-            return values[2]; // For example:
-            // Linux version 4.15.0-52-generic (buildd@lgw01-amd64-054) ....... (omitted a lot tailing stuff)
+            return values[2]; 
         }
     }
 
     return "";
 }
 
-/* Read /etc/os-release. We expect a string with extra characters,
- * which we delete based on specifications in documentation.
- * The result is the name of the operating system.
- * */
+
 std::string ProcessParser::getOsName() {
     std::string line;
     std::string name = "PRETTY_NAME";
@@ -405,10 +370,7 @@ int ProcessParser::getTotalThreads() {
                 std::vector<std::string> values(begin, end);
 
                 result += stoi(values[1]); // For example:
-                // cat "/proc/16653/status":
-                // ......
-                // Threads:      16
-                // ......
+               
                 break;
             }
         }
@@ -431,10 +393,7 @@ int ProcessParser::getTotalNumberOfProcesses() {
             std::vector<std::string> values(begin, end);
 
             result += stoi(values[1]); // For example:
-            // cat "/proc/stat":
-            // ......
-            // processess 152983
-            // ......
+            
             break;
         }
     }
@@ -456,10 +415,7 @@ int ProcessParser::getNumberOfRunningProcesses() {
             std::vector<std::string> values(begin, end);
 
             result += stoi(values[1]); // For example:
-            // cat "/proc/stat":
-            // ......
-            // procs_running 3
-            // ......
+            
             break;
         }
     }
