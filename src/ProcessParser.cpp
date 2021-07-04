@@ -201,6 +201,8 @@ int ProcessParser::getNumberofCores() {
             return stoi(values[3]); // FYI, the raw info: "cpu cores       : 2"
         }
     }
+
+    return 0;
 }
 
 
