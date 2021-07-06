@@ -50,11 +50,11 @@ void getProcessListToConsole(ProcessContainer procs,WINDOW* win) {
     procs.refreshList();
     wattron(win,COLOR_PAIR(2));
     mvwprintw(win,1,2,"PID:");
-    mvwprintw(win,1,9,"User:");
-    mvwprintw(win,1,16,"CPU[%]:");
-    mvwprintw(win,1,26,"RAM[MB]:");
-    mvwprintw(win,1,35,"Uptime:");
-    mvwprintw(win,1,44,"CMD:");
+    mvwprintw(win,1,15,"User:");
+    mvwprintw(win,1,25,"CPU[%]:");
+    mvwprintw(win,1,35,"RAM[MB]:");
+    mvwprintw(win,1,45,"Uptime:");
+    mvwprintw(win,1,58,"CMD:");
     wattroff(win, COLOR_PAIR(2));
 
     vector<std::string> processes = procs.getList();

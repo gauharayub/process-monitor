@@ -52,16 +52,22 @@ string Process::getProcess() {
     this->mem = ProcessParser::getVmSize(this->pid);
     this->upTime = ProcessParser::getProcUpTime(this->pid);
     this->cpu = ProcessParser::getCpuPercent(this->pid);
+    
+    int len = this->user.length();
+    string spaces;
+    int spaceLength = 12-len;
 
-    return(this->pid + "   "
+    spaces.append(spaceLength,' ');
+
+    return(this->pid + spaces
         + this->user
-        + "   "
+        + "      "
         + this->mem.substr(0,5)
-        + "     "
+        + "      "
         + this->cpu.substr(0,5)
-        + "     "
+        + "      "
         + this->upTime.substr(0,5)
-        + "    "
+        + "      "
         + this->cmd.substr(0,30)
         + "...");
 }
